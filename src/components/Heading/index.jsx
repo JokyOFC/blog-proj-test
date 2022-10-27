@@ -8,6 +8,7 @@ export const Heading = ({
   as = 'h1',
   size = 'big',
   uppercase = false,
+  lineHeight = 'default',
 }) => {
   return (
     <Styled.Title
@@ -16,6 +17,7 @@ export const Heading = ({
       size={size}
       uppercase={uppercase}
       theme={theme}
+      lineHeight={lineHeight}
     >
       {children}
     </Styled.Title>
@@ -27,5 +29,6 @@ Heading.propTypes = {
   colorDark: P.bool,
   as: P.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p']),
   size: P.oneOf(['small', 'medium', 'big', 'huge']),
+  lineHeight: P.oneOf(['default', 'temp1']),
   uppercase: P.bool,
 };

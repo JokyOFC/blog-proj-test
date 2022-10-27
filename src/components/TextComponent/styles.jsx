@@ -8,7 +8,7 @@ export const Container = styled.div`
     p {
       margin: ${theme.spacings.xlarge} 0;
       font-size: 2rem;
-      line-height: 1.5;
+      line-height: 2.5rem;
     }
     a,
     a:visited,

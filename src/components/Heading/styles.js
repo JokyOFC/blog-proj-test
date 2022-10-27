@@ -27,9 +27,9 @@ const mediaFont = ({ theme }) => css`
 `;
 
 export const Title = styled.h1`
-  ${({ theme, colorDark, size, uppercase }) => css`
+  ${({ theme, colorDark, size, uppercase, lineHeight }) => css`
     color: ${colorDark ? theme.colors.primaryColor : theme.colors.white};
-    line-height: 1.2rem;
+    line-height: ${lineHeight === 'default' ? auto : '1.2rem'};
     ${titleSize[size](theme)};
     ${titleCase(uppercase)};
   `}
