@@ -5,8 +5,8 @@ import { Container as SectionContainer } from '../SectionContainer/styles';
 export const Container = styled.footer`
   ${({ theme }) => css`
     text-align: center;
-    border-top: 5rem solid ${theme.colors.white};
-    border-bottom: 5rem solid ${theme.colors.white};
+    border-top: 0.25rem solid ${theme.colors.mediumGray};
+    border-bottom: 0.25rem solid ${theme.colors.white};
 
     a {
       color: inherit;

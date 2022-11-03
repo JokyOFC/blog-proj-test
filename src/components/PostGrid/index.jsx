@@ -6,7 +6,7 @@ export const PostGrid = ({ posts = [] }) => {
   return (
     <Styled.Container>
       {posts.length === 0 && (
-        <Styled.NotFound>Nenhum post encontrado aqui</Styled.NotFound>
+        <Styled.NotFound>Nenhum post encontrado por aqui</Styled.NotFound>
       )}
 
       <Styled.Grid>

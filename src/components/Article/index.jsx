@@ -7,19 +7,31 @@ import { TextComponent } from '../TextComponent';
 
 import { ArticleContainer } from '../ArticleContainer';
 
-export const Article = ({ title, description, image, metaData, children }) => {
+export const Article = ({
+  title,
+  author,
+  categories,
+  content,
+  cover,
+  createdAt,
+  excerpt,
+  id,
+}) => {
   return (
     <Styled.Container>
       <ArticleContainer size="max">
         <ArticleHeader
+          author={author}
+          categories={categories}
           title={title}
-          description={description}
-          image={image}
-          metaData={metaData}
+          excerpt={excerpt}
+          id={id}
+          cover={cover}
+          createdAt={createdAt}
         />
       </ArticleContainer>
       <ArticleContainer size="content">
-        <TextComponent>{children}</TextComponent>
+        <TextComponent>{content}</TextComponent>
       </ArticleContainer>
     </Styled.Container>
   );

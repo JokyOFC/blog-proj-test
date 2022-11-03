@@ -29,3 +29,27 @@ export const Template = (args) => {
     </div>
   );
 };
+
+export const NoAuthor = (args) => {
+  return (
+    <div>
+      <ArticleMeta {...args} author={undefined} />
+    </div>
+  );
+};
+
+export const NoCategories = (args) => {
+  return (
+    <div>
+      <ArticleMeta {...args} categories={undefined} />
+    </div>
+  );
+};
+
+export const NoAuthorAndCategories = (args) => {
+  return (
+    <div>
+      <ArticleMeta {...args} author={undefined} categories={undefined} />
+    </div>
+  );
+};

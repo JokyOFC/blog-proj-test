@@ -17,6 +17,7 @@ export const ArticleContainer = styled.div`
   ${({ theme, size }) => css`
     width: 100%;
     margin: 0 auto;
-    ${postContainerStyles[size](theme)}
+    padding: 0 ${theme.spacings.large};
+    ${postContainerStyles[size](theme)};
   `}
 `;

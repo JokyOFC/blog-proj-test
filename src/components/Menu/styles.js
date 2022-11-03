@@ -26,6 +26,7 @@ export const Container = styled.div`
     top: 0;
     left: 0;
     transition: all 300ms ease-in-out;
+    overflow-y: auto;
     ${containerChanger(menuVisible, theme)}
   `}
 `;
@@ -42,9 +43,9 @@ export const Nav = styled.nav`
 export const Logo = styled.nav`
   ${({ theme }) => css`
     img {
-      min-height: 12.8rem;
-      min-width: 12.8rem;
+      height: 12.8rem;
       border-radius: 10.2rem;
+      width: 12.8rem;
     }
 
     ${HeadingStyles} {

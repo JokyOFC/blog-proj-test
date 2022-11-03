@@ -1,22 +1,11 @@
 import { Article } from '.';
 
-import mockContent from '../TextComponent/mock';
-
-import mockMetadata from '../ArticleMeta/mock';
+import mock from './mock';
 
 export default {
   title: 'Article',
   component: Article,
-  args: {
-    title: 'Article',
-    description: 'description',
-    image: 'https://photoscissors.com/images/samples/3-before.jpg',
-    metaData: mockMetadata,
-    children: mockContent,
-  },
-  argTypes: {
-    children: { type: 'string' },
-  },
+  args: mock,
 };
 
 export const Template = (args) => {
