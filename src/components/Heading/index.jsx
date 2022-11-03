@@ -29,6 +29,6 @@ Heading.propTypes = {
   colorDark: P.bool,
   as: P.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p']),
   size: P.oneOf(['small', 'medium', 'big', 'huge']),
-  lineHeight: P.oneOf(['default', 'temp1']),
+  lineHeight: P.oneOf(['default', 'temp1', 'temp2']),
   uppercase: P.bool,
 };

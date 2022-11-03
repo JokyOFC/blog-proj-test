@@ -9,7 +9,7 @@ export const HeaderContainer = styled.div`
     margin-top: ${theme.spacings.xhuge};
     padding: 0 ${theme.spacings.large};
   `}
-`;
+`;  
 
 export const ContentContainer = styled.div`
   ${({ theme }) => css`

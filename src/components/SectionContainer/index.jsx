@@ -10,6 +10,5 @@ export const SectionContainer = ({ children, background = false }) => {
 
 SectionContainer.propTypes = {
   children: P.node.isRequired,
-
   background: P.bool,
 };
