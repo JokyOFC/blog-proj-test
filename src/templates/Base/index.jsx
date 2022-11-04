@@ -4,6 +4,8 @@ import { Menu } from '../../components/Menu';
 import * as Styled from './styles';
 import { Footer } from '../../components/Footer';
 
+import { GoTop } from '../../components/GoTop';
+
 export const BaseTemplate = ({ settings, children }) => {
   return (
     <Styled.Container>
@@ -24,6 +26,8 @@ export const BaseTemplate = ({ settings, children }) => {
       </Styled.HeaderContainer>
 
       <Styled.ContentContainer>{children}</Styled.ContentContainer>
+
+      <GoTop />
 
       <Styled.FooterContainer>
         <Footer footerHtml={settings.text} />
