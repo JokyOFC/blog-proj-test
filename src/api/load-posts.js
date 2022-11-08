@@ -20,10 +20,15 @@ export const loadPosts = async (
     start: 0,
     limit: 10,
   };
+
   const data = await request(config.graphQLURL, GRAPHQL_QUERY, {
     ...defaultVariables,
     ...variables,
+  }).then((response) => {
+    return response;
   });
+
+  console.log(data);
 
   return data;
 };

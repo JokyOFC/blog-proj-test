@@ -4,18 +4,19 @@ import * as Styled from './styles';
 import Link from 'next/link';
 
 export const PostTags = ({ tags = [] }) => {
-  if (tags.length === 0) {
+  console.log('there is tags!!!');
+  console.log(tags.data);
+  if (tags.data[0].length === 0) {
     return null;
   }
-
   return (
     <Styled.Container>
       tags:
-      {tags.map((tag) => {
+      {tags.data.map((tag) => {
         return (
           <span key={tag.id}>
-            <Link href={`/tag/${tag.slug}`}>
-              <a>{tag.displayName}</a>
+            <Link href={`/tag/${tag.attributes.slug}`}>
+              <a>{tag.attributes.displayName}</a>
             </Link>
           </span>
         );

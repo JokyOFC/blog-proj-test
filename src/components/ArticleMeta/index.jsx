@@ -14,15 +14,16 @@ export const ArticleMeta = ({
         {typeof author !== 'undefined' && (
           <>
             <span>Por </span>
-            <Link href={`/author/${author.slug}`}>
-              <a>{author.displayName}</a>
+            <Link href={`/author/${author.attributes.slug}`}>
+              <a>{author.attributes.displayName}</a>
             </Link>
             <span className="separator"> | </span>
           </>
         )}
 
         <time dateTime={createdAt}>{formatDate(createdAt)}</time>
-
+        {console.log('there is new categories!')}
+        {console.log(categories)}
         {categories.length > 0 && (
           <>
             <span className="separator"> | </span>
@@ -30,8 +31,8 @@ export const ArticleMeta = ({
               {categories.map((categories) => {
                 return (
                   <span key={`article-meta-cat-${categories.id}`}>
-                    <Link href={`/category/${categories.slug}`}>
-                      <a>{categories.displayName}</a>
+                    <Link href={`/category/${categories.attributes.slug}`}>
+                      <a>{categories.attributes.displayName}</a>
                     </Link>
                   </span>
                 );

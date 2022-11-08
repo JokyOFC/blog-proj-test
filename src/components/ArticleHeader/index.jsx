@@ -21,13 +21,17 @@ export const ArticleHeader = ({
         </Heading>
       </Styled.Header>
       <Styled.ImageContainer>
-        <Styled.Image src={cover.url} />
+        <Styled.Image src={cover.data.attributes.url} />
       </Styled.ImageContainer>
 
       <Styled.Container>
+        {console.log('there is attributes!!!')}
+        {console.log(categories.data[0])}
+        {console.log('there is author!!!')}
+        {console.log(author)}
         <ArticleMeta
-          categories={categories}
-          author={author}
+          categories={categories.data}
+          author={author.data}
           createdAt={createdAt}
         />
       </Styled.Container>

@@ -8,6 +8,7 @@ export const HeaderContainer = styled.div`
   ${({ theme }) => css`
     margin-top: ${theme.spacings.xhuge};
     padding: 0 ${theme.spacings.large};
+    margin-bottom: ${theme.spacings.xhuge};
   `}
 `;
 

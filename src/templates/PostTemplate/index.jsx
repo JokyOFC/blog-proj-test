@@ -5,6 +5,7 @@ import { PostTags } from '../../components/PostTags';
 import * as Styled from './styles';
 
 export const PostTemplate = ({ settings, post }) => {
+  console.log(post);
   return (
     <BaseTemplate settings={settings}>
       <Article {...post} />
@@ -13,8 +14,4 @@ export const PostTemplate = ({ settings, post }) => {
       </Styled.TagsContainer>
     </BaseTemplate>
   );
-};
-
-PostTemplate.propTypes = {
-  children: P.node.isRequired,
 };

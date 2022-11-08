@@ -12,13 +12,13 @@ export const BaseTemplate = ({ settings, children }) => {
       <Menu
         links={settings.menuLink}
         blogName={settings.blogName}
-        logo={settings.logo.url}
+        logo={settings.logo.data.attributes.url}
       />
 
       <Styled.HeaderContainer>
         <TopHeader
           description={settings.blogDescription}
-          backgroundImage={settings.logo.url}
+          backgroundImage={settings.logo.data.attributes.url}
           showText={true}
         >
           {settings.blogName}

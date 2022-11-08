@@ -8,10 +8,12 @@ export const PostGrid = ({ posts = [] }) => {
       {posts.length === 0 && (
         <Styled.NotFound>Nenhum post encontrado por aqui</Styled.NotFound>
       )}
-
       <Styled.Grid>
         {posts.length > 0 &&
-          posts.map((post) => <PostCard key={`p1-${post.id}`} {...post} />)}
+          posts.map((post) => {
+            console.log(post.attributes);
+            return <PostCard key={`p1-${post.id}`} {...post.attributes} />;
+          })}
       </Styled.Grid>
     </Styled.Container>
   );

@@ -4,11 +4,13 @@ import Link from 'next/link';
 import { Heading } from '../Heading';
 
 export const PostCard = ({ title, cover, excerpt, slug }) => {
+  console.log('this is cover');
+  console.log(slug);
   return (
     <Styled.Container>
       <Link href={`/post/${slug}`}>
         <a>
-          <Styled.Cover src={cover.url} />
+          <Styled.Cover src={cover.data.attributes.url} />
         </a>
       </Link>
       <Heading as="h2" size="small" lineHeight="temp2">
