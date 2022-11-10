@@ -6,7 +6,7 @@ import { Footer } from '../../components/Footer';
 
 import { GoTop } from '../../components/GoTop';
 
-export const BaseTemplate = ({ settings, children }) => {
+export const BaseTemplate = ({ settings, children, head }) => {
   return (
     <Styled.Container>
       <Menu
@@ -15,15 +15,17 @@ export const BaseTemplate = ({ settings, children }) => {
         logo={settings.logo.data.attributes.url}
       />
 
-      <Styled.HeaderContainer>
-        <TopHeader
-          description={settings.blogDescription}
-          backgroundImage={settings.logo.data.attributes.url}
-          showText={true}
-        >
-          {settings.blogName}
-        </TopHeader>
-      </Styled.HeaderContainer>
+      {head && (
+        <Styled.HeaderContainer>
+          <TopHeader
+            description={settings.blogDescription}
+            backgroundImage={settings.logo.data.attributes.url}
+            showText={true}
+          >
+            {settings.blogName}
+          </TopHeader>
+        </Styled.HeaderContainer>
+      )}
 
       <Styled.ContentContainer>{children}</Styled.ContentContainer>
 

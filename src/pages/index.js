@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { ThemeProvider } from 'styled-components';
-import { loadPosts } from '../api/load-posts';
+import { defaultLoadPostsVariables, loadPosts } from '../api/load-posts';
 import { theme } from '../styles/theme';
 
 import { PostsTemplate } from '../templates/PostsTemplate';
@@ -10,7 +10,7 @@ import { GraphQLString } from 'graphql';
 
 import { useEffect } from 'react';
 
-export default function Home({ posts, setting }) {
+export default function Home({ posts, setting, variables }) {
   console.log(setting.attributes.blogDescription);
   return (
     <>
@@ -19,7 +19,11 @@ export default function Home({ posts, setting }) {
         <meta name="description" content={setting.attributes.blogDescription} />
       </Head>
       {console.log(setting.attributes)}
-      <PostsTemplate posts={posts.data} settings={setting.attributes} />
+      <PostsTemplate
+        posts={posts.data}
+        settings={setting.attributes}
+        variables={variables}
+      />
     </>
   );
 }
@@ -44,6 +48,9 @@ export const getStaticProps = async () => {
     props: {
       posts: data.posts,
       setting: data.setting.data,
+      variables: {
+        ...defaultLoadPostsVariables,
+      },
     },
     revalidate: 24 * 60 * 60,
   };
